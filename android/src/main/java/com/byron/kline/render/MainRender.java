@@ -30,32 +30,37 @@ import com.byron.kline.utils.Status;
 public class MainRender extends BaseRender {
 
     private int itemCount;
-    private String[] strings = new String[8];
+    private final String[] strings = new String[8];
     private IValueFormatter valueFormatter = new ValueFormatter();
     private float candleWidth, margin, padding, mainLegendMarginTop,
             maOne, maTwo, maThree, bollUp, bollMb, bollDn;
     private final int indexInterval;
-    private String indexMa1, indexMa2, indexMa3, indexBoll, indexUb, indexLb;
+    private final String indexMa1;
+    private final String indexMa2;
+    private final String indexMa3;
+    private final String indexBoll;
+    private final String indexUb;
+    private final String indexLb;
 
     public void setItemCount(int mItemCount) {
         itemCount = mItemCount;
     }
 
-    private Paint lineAreaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint upPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint upLinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint downPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint downLinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint lineAreaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint upPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint upLinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint downPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint downLinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
 
-    private Paint indexPaintOne = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint indexPaintTwo = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint indexPaintThree = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint indexPaintOne = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint indexPaintTwo = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint indexPaintThree = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-    private Paint selectorTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint selectorBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint selectorBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectorTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectorBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectorBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     private String[] marketInfoText = new String[8];
 
@@ -67,14 +72,14 @@ public class MainRender extends BaseRender {
         upLinePaint.setAntiAlias(true);
         downLinePaint.setStyle(Paint.Style.STROKE);
         downLinePaint.setAntiAlias(true);
-        marketInfoText[0] = ("时间   ");
-        marketInfoText[1] = ("开     ");
-        marketInfoText[2] = ("高     ");
-        marketInfoText[3] = ("低     ");
-        marketInfoText[4] = ("收     ");
-        marketInfoText[5] = ("涨跌额  ");
-        marketInfoText[6] = ("涨跌幅  ");
-        marketInfoText[7] = ("成交量  ");
+        marketInfoText[0] = ("Time     ");
+        marketInfoText[1] = ("Open     ");
+        marketInfoText[2] = ("High     ");
+        marketInfoText[3] = ("Low      ");
+        marketInfoText[4] = ("Close    ");
+        marketInfoText[5] = ("Increase ");
+        marketInfoText[6] = ("Gainers  ");
+        marketInfoText[7] = ("Volume   ");
 
         indexMa1 = String.format(context.getString(R.string.k_index_ma_formater), Constants.K_MA_NUMBER_1);
         indexMa2 = String.format(context.getString(R.string.k_index_ma_formater), Constants.K_MA_NUMBER_2);
@@ -542,7 +547,7 @@ public class MainRender extends BaseRender {
     /**
      * 最大值最小值画笔  max value /min value paint
      */
-    private Paint maxMinPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint maxMinPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     /**
      * 设置最大值/最小值文字颜色 max value /min value text color

@@ -21,11 +21,11 @@ import com.byron.kline.adapter.IAdapter;
 
 public abstract class BaseKLineChartAdapter<T> implements IAdapter<T> {
 
-    private Handler handler = new Handler(Looper.getMainLooper());
-    private DataSetObservable mDataSetObservable = new DataSetObservable();
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private final DataSetObservable mDataSetObservable = new DataSetObservable();
 
-    private Runnable notifyDataChangeRunable = () -> mDataSetObservable.notifyChanged();
-    private Runnable notifyDataWillChangeRunnable = () -> mDataSetObservable.notifyInvalidated();
+    private final Runnable notifyDataChangeRunable = () -> mDataSetObservable.notifyChanged();
+    private final Runnable notifyDataWillChangeRunnable = () -> mDataSetObservable.notifyInvalidated();
 
     @Override
     public void notifyDataSetChanged() {

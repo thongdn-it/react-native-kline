@@ -64,19 +64,19 @@ public class DepthChartView extends View implements GestureDetector.OnGestureLis
     /**
      * 文本画笔
      */
-    private Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     /**
      * 要绘制的折线线画笔
      */
-    private Paint brokenLineBuyPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint brokenLineBuyPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-    private Paint brokenLineFillBuyPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint brokenLineFillBuyPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-    private Paint brokenLineSellPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint brokenLineSellPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-    private Paint brokenLineFillSellPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint brokenLineFillSellPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-    private Paint touchBgPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint touchBgPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     /**
      * 边框的左边距
@@ -105,9 +105,9 @@ public class DepthChartView extends View implements GestureDetector.OnGestureLis
     /**
      * 数据值
      */
-    private List<MarketDepthPercentItem> mBuyDataList = new ArrayList<>();
+    private final List<MarketDepthPercentItem> mBuyDataList = new ArrayList<>();
 
-    private List<MarketDepthPercentItem> mSellDataList = new ArrayList<>();
+    private final List<MarketDepthPercentItem> mSellDataList = new ArrayList<>();
     /**
      * 图表的y轴最大值
      */
@@ -485,7 +485,7 @@ public class DepthChartView extends View implements GestureDetector.OnGestureLis
         for (int i = 0; i < gridRows; i++) {
             float nowadayHeight = averageHeight * i;
             double v = averageYValue * (gridRows - i) + minYValue;
-            canvas.drawText(verticalCoordinatePlace(v) + "", getWidth() - verticalLabelMarginRight, nowadayHeight + brokenLineMarginTop, textPaint);
+            canvas.drawText(verticalCoordinatePlace(v), getWidth() - verticalLabelMarginRight, nowadayHeight + brokenLineMarginTop, textPaint);
         }
         //横向的坐标
         float averageWidth = realDrawWidth / (gridColumns - 1);
@@ -500,11 +500,11 @@ public class DepthChartView extends View implements GestureDetector.OnGestureLis
             float y = brokenLineMarginTop + realDrawHeight + bounds.height() + horizontalLabelMarginTop;
 
             if (i == 0) {
-                canvas.drawText(text + "", brokenLineMarginLeft + tempWidth, y, textPaint);
+                canvas.drawText(text, brokenLineMarginLeft + tempWidth, y, textPaint);
             } else if (i == gridColumns - 1) {
-                canvas.drawText(text + "", brokenLineMarginLeft + tempWidth - bounds.width(), y, textPaint);
+                canvas.drawText(text, brokenLineMarginLeft + tempWidth - bounds.width(), y, textPaint);
             } else {
-                canvas.drawText(text + "", brokenLineMarginLeft + tempWidth - (bounds.width() >> 1), y, textPaint);
+                canvas.drawText(text, brokenLineMarginLeft + tempWidth - (bounds.width() >> 1), y, textPaint);
             }
         }
     }

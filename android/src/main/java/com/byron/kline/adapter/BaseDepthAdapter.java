@@ -20,7 +20,7 @@ import java.util.List;
  *************************************************************************/
 public abstract class BaseDepthAdapter implements IAdapter {
 
-    private Handler handler = new Handler(Looper.getMainLooper());
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private final DataSetObservable mDataSetObservable = new DataSetObservable();
     protected float[] tempLeftDatas;
     protected float[] tempRightDatas;
@@ -35,8 +35,8 @@ public abstract class BaseDepthAdapter implements IAdapter {
     protected List<List<Double>> iDepthsLeft = new ArrayList<>();
     protected List<List<Double>> iDepthsRight = new ArrayList<>();
 
-    private Runnable notifyDataChangeRunable = mDataSetObservable::notifyChanged;
-    private Runnable notifyDataWillChangeRunnable = mDataSetObservable::notifyInvalidated;
+    private final Runnable notifyDataChangeRunable = mDataSetObservable::notifyChanged;
+    private final Runnable notifyDataWillChangeRunnable = mDataSetObservable::notifyInvalidated;
 
     @Override
     public void notifyDataSetChanged() {

@@ -13,7 +13,7 @@ package com.byron.kline.utils;
 public class Status {
 
     public enum PriceLineLabelState {
-        PRICE_LINE_WITH_LABEL, PRICE_LINE_RIGHT_LABEL;
+        PRICE_LINE_WITH_LABEL, PRICE_LINE_RIGHT_LABEL
     }
 
     public enum MainStatus {
@@ -24,7 +24,7 @@ public class Status {
         FOLLOW_FINGERS(true),//跟随手指移动
         SHOW_CLOSE(false); //y值显示当前价格
 
-        private boolean state;
+        private final boolean state;
 
         CrossTouchModel(boolean state) {
             this.state = state;
@@ -46,7 +46,7 @@ public class Status {
             this.statu = statu;
         }
 
-        private int statu;
+        private final int statu;
 
         public int getStatu() {
             return statu;
@@ -55,7 +55,7 @@ public class Status {
 
     public enum IndexStatus {
         NONE("none"), MACD("macd"), KDJ("kdj"), RSI("rsi"), WR("wr"), EMA("ema");
-        private String statu;
+        private final String statu;
 
         IndexStatus(String statu) {
             this.statu = statu;
@@ -71,7 +71,7 @@ public class Status {
         BAR_CHART(true),//柱状图
         LINE_CHART(false); //线状图
 
-        private boolean statu;
+        private final boolean statu;
 
         VolChartStatus(boolean statu) {
             this.statu = statu;
@@ -86,7 +86,7 @@ public class Status {
         TIME_LINE(true),//分时线
         K_LINE(false); //K线
 
-        private boolean statu;
+        private final boolean statu;
 
         KlineStatus(boolean statu) {
             this.statu = statu;
@@ -102,7 +102,7 @@ public class Status {
         SELECT_PRESS(1),//long press modle
         SELECT_BOTH(2),//both modle
         SELECT_NONE(3);// can't touch
-        private int model;
+        private final int model;
 
         ShowCrossModel(int model) {
             this.model = model;
@@ -115,7 +115,7 @@ public class Status {
         DECREASE_HOLLOW(2),//涨空心
         INCREASE_HOLLOW(3);//跌实心
 
-        private int model;
+        private final int model;
 
         HollowModel(int model) {
             this.model = model;

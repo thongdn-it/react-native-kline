@@ -1,26 +1,16 @@
-// android/build.gradle
+import groovy.json.JsonSlurper
 
-// based on:
-//
-// * https://github.com/facebook/react-native/blob/0.60-stable/template/android/build.gradle
-//   original location:
-//   - https://github.com/facebook/react-native/blob/0.58-stable/local-cli/templates/HelloWorld/android/build.gradle
-//
-// * https://github.com/facebook/react-native/blob/0.60-stable/template/android/app/build.gradle
-//   original location:
-//   - https://github.com/facebook/react-native/blob/0.58-stable/local-cli/templates/HelloWorld/android/app/build.gradle
-
-def DEFAULT_COMPILE_SDK_VERSION = 28
-def DEFAULT_BUILD_TOOLS_VERSION = '28.0.3'
-def DEFAULT_MIN_SDK_VERSION = 16
-def DEFAULT_TARGET_SDK_VERSION = 28
+def DEFAULT_COMPILE_SDK_VERSION = 34
+def DEFAULT_BUILD_TOOLS_VERSION = '34.0.0'
+def DEFAULT_MIN_SDK_VERSION = 21
+def DEFAULT_TARGET_SDK_VERSION = 34
 
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 buildscript {
     // The Android Gradle plugin is only required when opening the android folder stand-alone.
@@ -30,16 +20,13 @@ buildscript {
     if (project == rootProject) {
         repositories {
             google()
-            jcenter()
+            mavenCentral()
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:3.4.1'
+            classpath 'com.android.tools.build:gradle:3.4.3'
         }
     }
 }
-
-apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', DEFAULT_COMPILE_SDK_VERSION)
@@ -71,20 +58,20 @@ repositories {
         url "$rootDir/../node_modules/jsc-android/dist"
     }
     google()
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'org.jetbrains:annotations:15.0'
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.9.1'
 }
 
 def configureReactNativePom(def pom) {
-    def packageJson = new groovy.json.JsonSlurper().parseText(file('../package.json').text)
+    def packageJson = new JsonSlurper().parseText(file('../package.json').text)
 
     pom.project {
         name packageJson.title
@@ -93,65 +80,54 @@ def configureReactNativePom(def pom) {
         group = "com.byron.kline"
         description packageJson.description
         url packageJson.repository.baseUrl
-
-        licenses {
-            license {
-                name packageJson.license
-                url packageJson.repository.baseUrl + '/blob/master/' + packageJson.licenseFilename
-                distribution 'repo'
-            }
-        }
-
-        developers {
-            developer {
-                id packageJson.author.username
-                name packageJson.author.name
-            }
-        }
     }
 }
 
-afterEvaluate { project ->
-    // some Gradle build hooks ref:
-    // https://www.oreilly.com/library/view/gradle-beyond-the/9781449373801/ch03.html
-    task androidJavadoc(type: Javadoc) {
-        source = android.sourceSets.main.java.srcDirs
-        classpath += files(android.bootClasspath)
-        classpath += files(project.getConfigurations().getByName('compile').asList())
-        include '**/*.java'
-    }
+// configurations {
+//   customConfig.extendsFrom implementation
+// }
 
-    task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
-        classifier = 'javadoc'
-        from androidJavadoc.destinationDir
-    }
+// afterEvaluate { project ->
+//     // some Gradle build hooks ref:
+//     // https://www.oreilly.com/library/view/gradle-beyond-the/9781449373801/ch03.html
+//     task androidJavadoc(type: Javadoc) {
+//         source = android.sourceSets.main.java.srcDirs
+//         classpath += files(android.bootClasspath)
+//         classpath += files(project.getConfigurations().getByName('customConfig').asList())
+//         include '**/*.java'
+//     }
 
-    task androidSourcesJar(type: Jar) {
-        classifier = 'sources'
-        from android.sourceSets.main.java.srcDirs
-        include '**/*.java'
-    }
+//     task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
+//         classifier = 'javadoc'
+//         from androidJavadoc.destinationDir
+//     }
 
-    android.libraryVariants.all { variant ->
-        def name = variant.name.capitalize()
-        def javaCompileTask = variant.javaCompileProvider.get()
+//     task androidSourcesJar(type: Jar) {
+//         classifier = 'sources'
+//         from android.sourceSets.main.java.srcDirs
+//         include '**/*.java'
+//     }
 
-        task "jar${name}"(type: Jar, dependsOn: javaCompileTask) {
-            from javaCompileTask.destinationDir
-        }
-    }
+//     android.libraryVariants.all { variant ->
+//         def name = variant.name.capitalize()
+//         def javaCompileTask = variant.javaCompileProvider.get()
 
-    artifacts {
-        archives androidSourcesJar
-        archives androidJavadocJar
-    }
+//         task "jar${name}"(type: Jar, dependsOn: javaCompileTask) {
+//             from javaCompileTask.destinationDir
+//         }
+//     }
 
-    task installArchives(type: Upload) {
-        configuration = configurations.archives
-        repositories.mavenDeployer {
-            // Deploy to react-native-event-bridge/maven, ready to publish to npm
-            repository url: "file://${projectDir}/../android/maven"
-            configureReactNativePom pom
-        }
-    }
-}
+//     artifacts {
+//         archives androidSourcesJar
+//         archives androidJavadocJar
+//     }
+
+//     task installArchives(type: Upload) {
+//         configuration = configurations.archives
+//         repositories.mavenDeployer {
+//             // Deploy to react-native-event-bridge/maven, ready to publish to npm
+//             repository url: "file://${projectDir}/../android/maven"
+//             configureReactNativePom pom
+//         }
+//     }
+// }

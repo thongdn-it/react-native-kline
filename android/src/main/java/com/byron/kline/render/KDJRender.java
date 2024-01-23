@@ -20,12 +20,14 @@ import com.byron.kline.utils.Constants;
 
 public class KDJRender extends BaseRender {
 
-    private Paint mKPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint mDPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint mJPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint mKPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint mDPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint mJPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private ValueFormatter valueFormatter = new ValueFormatter();
     private final int indexInterval;
-    private String kIndexLabel,dIndexLabel,jIndexLabel;
+    private final String kIndexLabel;
+    private final String dIndexLabel;
+    private final String jIndexLabel;
 
     public KDJRender(Context context) {
         indexInterval = Constants.getCount();

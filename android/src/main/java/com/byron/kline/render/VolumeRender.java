@@ -29,17 +29,19 @@ import java.util.Arrays;
  *************************************************************************/
 public class VolumeRender extends BaseRender {
 
-    private Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint increasePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint decreasePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint maOnePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint maTwoPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint volLeftPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint increasePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint decreasePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint maOnePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint maTwoPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint volLeftPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private float volWidth, lineVolWidth, volLegendMarginTop, endMaOne, endMaTwo;
     private IValueFormatter valueFormatter = new ValueFormatter();
     private int itemsCount;
     private final int indexInterval;
-    private String volMaIndex1, volMaIndex2, volIndex;
+    private final String volMaIndex1;
+    private final String volMaIndex2;
+    private final String volIndex;
 
     public VolumeRender(Context context) {
         indexInterval = Constants.getCount();

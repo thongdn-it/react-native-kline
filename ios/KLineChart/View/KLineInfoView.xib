@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,8 +19,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d30-la-USg">
                             <rect key="frame" x="0.0" y="0.0" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3I-po-WuT">
-                                    <rect key="frame" x="0.0" y="3.5" width="18.5" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3I-po-WuT">
+                                    <rect key="frame" x="0.0" y="3.5" width="19" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -45,8 +44,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeu-Pj-hEs">
                             <rect key="frame" x="0.0" y="18" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-Gw-NII">
-                                    <rect key="frame" x="0.0" y="3.5" width="9.5" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-Gw-NII">
+                                    <rect key="frame" x="0.0" y="3.5" width="23.5" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -70,8 +69,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-nM-Z6U">
                             <rect key="frame" x="0.0" y="36" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j66-ET-H30">
-                                    <rect key="frame" x="0.0" y="3.5" width="9.5" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j66-ET-H30">
+                                    <rect key="frame" x="0.0" y="3.5" width="20.5" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -95,8 +94,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgX-hr-XBm">
                             <rect key="frame" x="0.0" y="54" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="低" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-4T-FCS">
-                                    <rect key="frame" x="0.0" y="3.5" width="9.5" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-4T-FCS">
+                                    <rect key="frame" x="0.0" y="3.5" width="18" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -120,8 +119,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQi-TX-aTm">
                             <rect key="frame" x="0.0" y="72" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCl-yH-P0Q">
-                                    <rect key="frame" x="0.0" y="3.5" width="9.5" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCl-yH-P0Q">
+                                    <rect key="frame" x="0.0" y="3.5" width="25" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -145,8 +144,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdO-qU-WAr">
                             <rect key="frame" x="0.0" y="90" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涨跌额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfw-1K-bHC">
-                                    <rect key="frame" x="0.0" y="3.5" width="28" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Increase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfw-1K-bHC">
+                                    <rect key="frame" x="0.0" y="3.5" width="37.5" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -170,8 +169,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMF-dq-2um">
                             <rect key="frame" x="0.0" y="108" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="涨跌幅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYa-K6-pLa">
-                                    <rect key="frame" x="0.0" y="3.5" width="28" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gainers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYa-K6-pLa">
+                                    <rect key="frame" x="0.0" y="3.5" width="34" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -195,8 +194,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkn-Em-M1u">
                             <rect key="frame" x="0.0" y="126" width="185" height="18"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成交量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhI-ad-NOg">
-                                    <rect key="frame" x="0.0" y="3.5" width="28" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhI-ad-NOg">
+                                    <rect key="frame" x="0.0" y="3.5" width="32.5" height="11"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -247,6 +246,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="LUi-0N-igD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="T2u-Ug-eOD"/>
@@ -255,24 +255,23 @@
                 <constraint firstItem="LUi-0N-igD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ki2-qt-x0M"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="IncreaseLabel" destination="QYB-ve-zRx" id="0ZH-cN-F2F"/>
-                <outlet property="IncreaseText" destination="Qfw-1K-bHC" id="z0I-V6-sQ8"/>
-                <outlet property="amountLable" destination="29T-BF-SbZ" id="PzP-eu-bOF"/>
-                <outlet property="amountText" destination="YhI-ad-NOg" id="pmd-Ad-t99"/>
-                <outlet property="amplitudeLabel" destination="hjN-2R-aaE" id="c6L-LW-RsW"/>
-                <outlet property="amplitudeText" destination="aYa-K6-pLa" id="THD-T5-3QO"/>
-                <outlet property="clsoeLabel" destination="6Op-lP-V4v" id="TT3-3h-hkX"/>
-                <outlet property="clsoeText" destination="RCl-yH-P0Q" id="a9k-oo-5Fp"/>
-                <outlet property="highLable" destination="IiU-NL-zHn" id="dSD-n6-6Sz"/>
-                <outlet property="highText" destination="j66-ET-H30" id="iTi-Mk-oSt"/>
-                <outlet property="lowLabel" destination="ioz-T1-jZ0" id="0ke-gW-OSu"/>
-                <outlet property="lowText" destination="8t4-4T-FCS" id="4Pj-9L-prb"/>
-                <outlet property="openLable" destination="54z-LE-KSb" id="g0W-fI-CZo"/>
-                <outlet property="openText" destination="fgB-Gw-NII" id="vkJ-QM-f1R"/>
-                <outlet property="timeLable" destination="Bt8-SK-WU2" id="h9y-Mt-zs5"/>
-                <outlet property="timeText" destination="V3I-po-WuT" id="hG2-2o-RVY"/>
+                <outlet property="lbAmountText" destination="YhI-ad-NOg" id="CUY-Vn-bCY"/>
+                <outlet property="lbAmountValue" destination="29T-BF-SbZ" id="31U-GR-YlO"/>
+                <outlet property="lbAmplitudeText" destination="aYa-K6-pLa" id="NIF-pi-f18"/>
+                <outlet property="lbAmplitudeValue" destination="hjN-2R-aaE" id="enO-CV-iyU"/>
+                <outlet property="lbCloseText" destination="RCl-yH-P0Q" id="kbL-VS-EAK"/>
+                <outlet property="lbCloseValue" destination="6Op-lP-V4v" id="TvN-6Q-9dm"/>
+                <outlet property="lbHighText" destination="j66-ET-H30" id="vfc-5O-TeZ"/>
+                <outlet property="lbHighValue" destination="IiU-NL-zHn" id="AHC-9T-Xdj"/>
+                <outlet property="lbIncreaseText" destination="Qfw-1K-bHC" id="1dr-nx-qfb"/>
+                <outlet property="lbIncreaseValue" destination="QYB-ve-zRx" id="s6Y-yz-v1F"/>
+                <outlet property="lbLowText" destination="8t4-4T-FCS" id="qmh-yU-lMS"/>
+                <outlet property="lbLowValue" destination="ioz-T1-jZ0" id="B2m-eP-Xa5"/>
+                <outlet property="lbOpenText" destination="fgB-Gw-NII" id="HJE-Rx-DL1"/>
+                <outlet property="lbOpenValue" destination="54z-LE-KSb" id="mjZ-yy-SYI"/>
+                <outlet property="lbTimeText" destination="V3I-po-WuT" id="TXc-X9-ggN"/>
+                <outlet property="lbTimeValue" destination="Bt8-SK-WU2" id="nmT-Kb-H4u"/>
             </connections>
             <point key="canvasLocation" x="-29.600000000000001" y="210.04497751124438"/>
         </view>

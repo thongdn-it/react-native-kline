@@ -24,9 +24,9 @@ import com.byron.kline.utils.Constants;
  *************************************************************************/
 public class WRRender extends BaseRender {
 
-    private Paint r1Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint r2Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint r3Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint r1Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint r2Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint r3Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private ValueFormatter valueFormatter = new ValueFormatter();
     private final int indexInterval;
     private final String legendText;

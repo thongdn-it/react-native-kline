@@ -69,10 +69,8 @@ public class ScrollView extends NestedScrollView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        switch (ev.getAction()) {
-            case MotionEvent.ACTION_UP:
-                isOldEvent = false;
-                break;
+        if (ev.getAction() == MotionEvent.ACTION_UP) {
+            isOldEvent = false;
         }
 
         return super.dispatchTouchEvent(ev);

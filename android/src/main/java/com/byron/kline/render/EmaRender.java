@@ -29,9 +29,9 @@ public class EmaRender extends BaseRender {
     private final String legendText1;
     private final String legendText2;
     private final String legendText3;
-    private Paint rsi1Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint rsi2Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint rsi3Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint rsi1Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint rsi2Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint rsi3Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private ValueFormatter valueFormatter = new ValueFormatter();
     private final int indexInterval;
 

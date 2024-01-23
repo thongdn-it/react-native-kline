@@ -492,10 +492,10 @@ export interface ByronKlineProps {
   volLegendMarginTop: number;
 }
 
-declare class ByronKlineComponent extends React.Component<
+declare class RNKLineChartComponent extends React.Component<
   Partial<ByronKlineProps> & ViewProps
 > {}
-export default class ByronKlineChart extends ByronKlineComponent {}
+export default class RNKLineChart extends RNKLineChartComponent {}
 export declare function dispatchByronKline(
   event: KLineEvent,
   list?: Array<KLineBar>

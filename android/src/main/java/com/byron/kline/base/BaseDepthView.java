@@ -35,7 +35,7 @@ public class BaseDepthView extends View implements View.OnTouchListener {
 
     private BaseDepthAdapter dataAdapter;
 
-    private float labelHeight = 40;
+    private final float labelHeight = 40;
 
     private boolean isShowLegent = true;
     private float legentHeight = 10;
@@ -52,7 +52,7 @@ public class BaseDepthView extends View implements View.OnTouchListener {
     private String rightLegentText;
 
     private int backGroundColor = Color.DKGRAY;
-    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     protected int height;
     protected int width;
@@ -304,7 +304,7 @@ public class BaseDepthView extends View implements View.OnTouchListener {
 
     private long startTime;
 
-    private Runnable longPressRunnable = new Runnable() {
+    private final Runnable longPressRunnable = new Runnable() {
         @Override
         public void run() {
             isSelected = changeState;

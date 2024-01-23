@@ -17,15 +17,15 @@ import android.graphics.Path;
  *************************************************************************/
 public class DepthRender {
 
-    private Paint depthPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint areaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint depthPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint areaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     private int leftColor = Color.parseColor("#ffffff");
     private int leftAreaColor = Color.parseColor("#4CD964");
     private int rightColor = Color.parseColor("#C7A976");
     private int rightAreaColor = Color.parseColor("#FF5959");
 
-    private Paint selectedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     private float selectedPointRadius = 2;
     private float selectedCircleRadius = 8;

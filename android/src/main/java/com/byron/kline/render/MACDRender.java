@@ -27,20 +27,22 @@ import com.byron.kline.utils.Status;
 
 public class MACDRender extends BaseRender {
 
-    private Paint redPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint greenPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint redStrokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint greenStrokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint difPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint deaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint macdPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint redPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint greenPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint redStrokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint greenStrokePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint difPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint deaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint macdPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     /**
      * macd 中柱子的宽度
      */
     private float macdWidth = 0;
     private ValueFormatter valueFormatter = new ValueFormatter();
     private final int indexInterval;
-    private String macdIndexLabel, difIndexLabel, deaIndexLabel;
+    private final String macdIndexLabel;
+    private final String difIndexLabel;
+    private final String deaIndexLabel;
     private Status.HollowModel macdStrokeModel = Status.HollowModel.NONE_HOLLOW;
 
     public MACDRender(Context context) {

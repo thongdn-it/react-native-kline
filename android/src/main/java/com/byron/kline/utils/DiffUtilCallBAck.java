@@ -18,8 +18,8 @@ import java.util.List;
  *************************************************************************/
 public class DiffUtilCallBAck<T extends IDepth> extends DiffUtil.Callback {
 
-    private List<T> newDatas;
-    private List<T> oldDatas;
+    private final List<T> newDatas;
+    private final List<T> oldDatas;
 
     public DiffUtilCallBAck(List<T> newDatas, List<T> oldDatas) {
         this.newDatas = newDatas;

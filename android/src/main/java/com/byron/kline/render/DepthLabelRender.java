@@ -17,10 +17,10 @@ import android.graphics.RectF;
  *************************************************************************/
 public class DepthLabelRender {
 
-    private Paint labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint selectedLabelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint selectedBoxPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private Paint selectedBoxBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectedLabelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectedBoxPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint selectedBoxBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private int selectedBoxColor = Color.BLACK;
     private int selectedBoxBorderColor = Color.WHITE;
     private int selectedBoxPadding = 3;

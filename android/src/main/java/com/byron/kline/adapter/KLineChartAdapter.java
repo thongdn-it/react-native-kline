@@ -35,7 +35,7 @@ public class KLineChartAdapter<T extends KLineEntity> extends BaseKLineChartAdap
         this.dataTools = dataTools;
     }
 
-    private List<T> datas = new ArrayList<>();
+    private final List<T> datas = new ArrayList<>();
     private float[] points;
 
     public float[] getPoints() {

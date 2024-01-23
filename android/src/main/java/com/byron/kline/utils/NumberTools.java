@@ -3,6 +3,7 @@ package com.byron.kline.utils;
 import android.text.TextUtils;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /*************************************************************************
  * Description   :
@@ -31,8 +32,8 @@ public class NumberTools {
     public static String roundDown(BigDecimal num, int len) {
         String strTemp = "";
         try {
-            String string = num.setScale(len + 2, BigDecimal.ROUND_HALF_UP).toPlainString();
-            return new BigDecimal(string).setScale(len, BigDecimal.ROUND_DOWN).toPlainString();
+            String string = num.setScale(len + 2, RoundingMode.HALF_UP).toPlainString();
+            return new BigDecimal(string).setScale(len, RoundingMode.DOWN).toPlainString();
         } catch (Exception ex) {
             strTemp = "";
         }

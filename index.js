@@ -3,7 +3,7 @@ import { UIManager, Platform } from "react-native";
 import { requireNativeComponent, findNodeHandle } from "react-native";
 
 let byronController = undefined;
-const ByronKline = requireNativeComponent("ByronKline");
+const ByronKLine = requireNativeComponent("ByronKline");
 
 export const dispatchByronKline = (event = "init", list = []) => {
   if (!byronController) {
@@ -40,7 +40,7 @@ export const KLineIndicator = {
   VolumeHide: 11,
 };
 
-const KlineComponent = (props, forwardedRef) => {
+const KLineComponent = (props, forwardedRef) => {
   const { onMoreKLineData, ...localProps } = props;
   const onMoreKLineDataEvent = onMoreKLineData
     ? (event) => onMoreKLineData(event.nativeEvent)
@@ -55,7 +55,7 @@ const KlineComponent = (props, forwardedRef) => {
   }, []);
 
   return (
-    <ByronKline
+    <ByronKLine
       {...localProps}
       ref={_forwardedRef}
       onRNMoreKLineData={onMoreKLineDataEvent}
@@ -63,17 +63,17 @@ const KlineComponent = (props, forwardedRef) => {
   );
 };
 
-const ByronKlineChart = React.forwardRef(KlineComponent);
+const RNKLineChart = React.forwardRef(KLineComponent);
 
-ByronKlineChart.defaultProps = {
+RNKLineChart.defaultProps = {
   datas: [],
   locales: [],
   indicators: [],
   pricePrecision: 2,
   volumePrecision: 2,
-  mainBackgroundColor: '#18181A',
+  mainBackgroundColor: "#18181A",
   increaseColor: "#00BD9A",
   decreaseColor: "#FF6960",
 };
 
-export default ByronKlineChart;
+export default RNKLineChart;
